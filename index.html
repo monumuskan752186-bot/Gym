@@ -1,0 +1,1357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>KEERTI FITNESS | Transform Your Body</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Montserrat',sans-serif;
+    background:#090909;
+    color:#fff;
+    overflow-x:hidden;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+}
+
+/* NAVBAR */
+
+nav{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:1000;
+    padding:20px 0;
+    background:rgba(0,0,0,.75);
+    backdrop-filter:blur(12px);
+    border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+.nav-inner{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    font-size:24px;
+    font-weight:900;
+    letter-spacing:1px;
+}
+
+.logo span{
+    color:#ff3b30;
+}
+
+.nav-links{
+    display:flex;
+    gap:30px;
+    list-style:none;
+}
+
+.nav-links a{
+    font-size:14px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.nav-links a:hover{
+    color:#ff3b30;
+}
+
+.nav-btn{
+    background:#ff3b30;
+    padding:12px 20px;
+    border-radius:6px;
+    font-size:13px;
+    font-weight:800;
+}
+
+/* HERO */
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    position:relative;
+    background:
+    linear-gradient(90deg,rgba(0,0,0,.95),rgba(0,0,0,.55),rgba(0,0,0,.2)),
+    url("https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1800&q=90");
+    background-size:cover;
+    background-position:center;
+}
+
+.hero-content{
+    max-width:700px;
+    padding-top:70px;
+}
+
+.small-title{
+    color:#ff3b30;
+    font-size:14px;
+    font-weight:800;
+    letter-spacing:3px;
+    margin-bottom:20px;
+}
+
+.hero h1{
+    font-size:clamp(48px,7vw,88px);
+    line-height:1;
+    font-weight:900;
+    text-transform:uppercase;
+}
+
+.hero h1 span{
+    color:#ff3b30;
+}
+
+.hero p{
+    margin-top:25px;
+    max-width:600px;
+    line-height:1.8;
+    color:#d0d0d0;
+    font-size:16px;
+}
+
+.hero-buttons{
+    display:flex;
+    gap:15px;
+    margin-top:35px;
+    flex-wrap:wrap;
+}
+
+.btn{
+    padding:16px 28px;
+    border-radius:5px;
+    font-weight:800;
+    font-size:13px;
+    transition:.3s;
+}
+
+.btn-primary{
+    background:#ff3b30;
+}
+
+.btn-primary:hover{
+    transform:translateY(-4px);
+}
+
+.btn-outline{
+    border:1px solid #fff;
+}
+
+.btn-outline:hover{
+    background:#fff;
+    color:#000;
+}
+
+/* STATS */
+
+.stats{
+    background:#ff3b30;
+    padding:25px 0;
+}
+
+.stats-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    text-align:center;
+}
+
+.stat h3{
+    font-size:28px;
+    font-weight:900;
+}
+
+.stat p{
+    font-size:11px;
+    margin-top:5px;
+    font-weight:600;
+}
+
+/* SECTIONS */
+
+section{
+    padding:100px 0;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:55px;
+}
+
+.section-title .tag{
+    color:#ff3b30;
+    font-size:12px;
+    font-weight:800;
+    letter-spacing:3px;
+}
+
+.section-title h2{
+    font-size:42px;
+    margin-top:12px;
+    font-weight:900;
+    text-transform:uppercase;
+}
+
+/* ABOUT */
+
+.about-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:60px;
+    align-items:center;
+}
+
+.about-image{
+    height:500px;
+    background:url("https://images.unsplash.com/photo-1571902943202-507ec2618e8f?auto=format&fit=crop&w=1000&q=85");
+    background-size:cover;
+    background-position:center;
+    border-radius:8px;
+}
+
+.about-text h2{
+    font-size:40px;
+    font-weight:900;
+    text-transform:uppercase;
+}
+
+.about-text h2 span{
+    color:#ff3b30;
+}
+
+.about-text p{
+    color:#aaa;
+    line-height:1.8;
+    margin-top:20px;
+}
+
+.features{
+    margin-top:30px;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:15px;
+}
+
+.feature{
+    padding:18px;
+    background:#151515;
+    border-left:3px solid #ff3b30;
+    font-weight:700;
+    font-size:13px;
+}
+
+/* PROGRAMS */
+
+.programs{
+    background:#0e0e0e;
+}
+
+.program-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+}
+
+.program{
+    padding:35px 25px;
+    background:#151515;
+    border:1px solid #242424;
+    transition:.3s;
+}
+
+.program:hover{
+    transform:translateY(-8px);
+    border-color:#ff3b30;
+}
+
+.icon{
+    font-size:40px;
+    margin-bottom:20px;
+}
+
+.program h3{
+    font-size:18px;
+    margin-bottom:12px;
+}
+
+.program p{
+    color:#999;
+    font-size:13px;
+    line-height:1.7;
+}
+
+/* MEMBERSHIP */
+
+.plans{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+
+.plan{
+    background:#151515;
+    border:1px solid #292929;
+    padding:40px 30px;
+    border-radius:8px;
+    position:relative;
+}
+
+.plan.featured{
+    border:2px solid #ff3b30;
+    transform:scale(1.04);
+}
+
+.badge{
+    position:absolute;
+    top:0;
+    right:20px;
+    background:#ff3b30;
+    padding:8px 14px;
+    font-size:10px;
+    font-weight:800;
+}
+
+.plan h3{
+    font-size:20px;
+}
+
+.price{
+    font-size:42px;
+    font-weight:900;
+    margin:20px 0;
+}
+
+.price span{
+    font-size:13px;
+    color:#999;
+}
+
+.plan ul{
+    list-style:none;
+    margin:25px 0;
+}
+
+.plan li{
+    padding:10px 0;
+    color:#bbb;
+    font-size:13px;
+    border-bottom:1px solid #252525;
+}
+
+/* TRAINERS */
+
+.trainers{
+    background:#0e0e0e;
+}
+
+.trainer-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+
+.trainer{
+    background:#151515;
+    overflow:hidden;
+}
+
+.trainer img{
+    width:100%;
+    height:330px;
+    object-fit:cover;
+    transition:.5s;
+}
+
+.trainer:hover img{
+    transform:scale(1.05);
+}
+
+.trainer-info{
+    padding:22px;
+}
+
+.trainer-info h3{
+    font-size:20px;
+}
+
+.trainer-info p{
+    color:#ff3b30;
+    font-size:12px;
+    margin-top:7px;
+    font-weight:700;
+}
+
+/* TIMINGS */
+
+.timing-box{
+    max-width:850px;
+    margin:auto;
+    background:#151515;
+    border:1px solid #282828;
+    border-radius:8px;
+    overflow:hidden;
+}
+
+.timing-row{
+    display:flex;
+    justify-content:space-between;
+    padding:24px 30px;
+    border-bottom:1px solid #292929;
+}
+
+.timing-row:last-child{
+    border-bottom:none;
+}
+
+.day{
+    font-weight:700;
+}
+
+.time{
+    color:#ff3b30;
+    font-weight:800;
+}
+
+/* GALLERY */
+
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:15px;
+}
+
+.gallery img{
+    width:100%;
+    height:260px;
+    object-fit:cover;
+    border-radius:6px;
+    transition:.4s;
+}
+
+.gallery img:hover{
+    transform:scale(1.03);
+}
+
+/* WHY */
+
+.why-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.why{
+    text-align:center;
+    padding:35px 20px;
+}
+
+.why-icon{
+    font-size:38px;
+    margin-bottom:15px;
+}
+
+.why h3{
+    margin-bottom:10px;
+}
+
+.why p{
+    color:#999;
+    font-size:13px;
+    line-height:1.7;
+}
+
+/* TESTIMONIAL */
+
+.testimonials{
+    background:#0e0e0e;
+}
+
+.testimonial-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.testimonial{
+    background:#151515;
+    padding:30px;
+    border-radius:7px;
+}
+
+.stars{
+    color:#ff3b30;
+    margin-bottom:15px;
+}
+
+.testimonial p{
+    color:#aaa;
+    line-height:1.7;
+    font-size:13px;
+}
+
+.testimonial h4{
+    margin-top:20px;
+}
+
+/* CTA */
+
+.cta{
+    padding:90px 20px;
+    text-align:center;
+    background:
+    linear-gradient(rgba(255,59,48,.9),rgba(255,59,48,.9)),
+    url("https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?auto=format&fit=crop&w=1800&q=85");
+    background-size:cover;
+    background-position:center;
+}
+
+.cta h2{
+    font-size:48px;
+    font-weight:900;
+    text-transform:uppercase;
+}
+
+.cta p{
+    margin:15px auto 30px;
+    max-width:600px;
+}
+
+/* CONTACT */
+
+.contact-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:25px;
+}
+
+.contact-card{
+    background:#151515;
+    padding:30px;
+    border-radius:7px;
+}
+
+.contact-card h3{
+    margin-bottom:15px;
+}
+
+.contact-card p{
+    color:#aaa;
+    line-height:1.8;
+    font-size:14px;
+}
+
+.contact-btn{
+    display:inline-block;
+    margin-top:20px;
+    background:#ff3b30;
+    padding:14px 24px;
+    border-radius:5px;
+    font-size:13px;
+    font-weight:800;
+}
+
+/* FOOTER */
+
+footer{
+    padding:45px 0;
+    background:#050505;
+    border-top:1px solid #222;
+    text-align:center;
+}
+
+footer .logo{
+    margin-bottom:15px;
+}
+
+footer p{
+    color:#666;
+    font-size:12px;
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+    .nav-links{
+        display:none;
+    }
+
+    .stats-grid{
+        grid-template-columns:1fr 1fr;
+        gap:20px;
+    }
+
+    .about-grid{
+        grid-template-columns:1fr;
+    }
+
+    .program-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .plans{
+        grid-template-columns:1fr;
+    }
+
+    .plan.featured{
+        transform:none;
+    }
+
+    .trainer-grid{
+        grid-template-columns:1fr;
+    }
+
+    .gallery{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .why-grid{
+        grid-template-columns:1fr;
+    }
+
+    .testimonial-grid{
+        grid-template-columns:1fr;
+    }
+
+    .contact-grid{
+        grid-template-columns:1fr;
+    }
+
+}
+
+@media(max-width:600px){
+
+    section{
+        padding:70px 0;
+    }
+
+    .hero h1{
+        font-size:48px;
+    }
+
+    .hero p{
+        font-size:14px;
+    }
+
+    .section-title h2{
+        font-size:32px;
+    }
+
+    .program-grid{
+        grid-template-columns:1fr;
+    }
+
+    .gallery{
+        grid-template-columns:1fr;
+    }
+
+    .gallery img{
+        height:280px;
+    }
+
+    .features{
+        grid-template-columns:1fr;
+    }
+
+    .cta h2{
+        font-size:34px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav>
+<div class="container nav-inner">
+
+<div class="logo">
+KEERTI <span>FITNESS</span>
+</div>
+
+<ul class="nav-links">
+<li><a href="#about">About</a></li>
+<li><a href="#programs">Programs</a></li>
+<li><a href="#plans">Membership</a></li>
+<li><a href="#gallery">Gallery</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+
+<a href="#contact" class="nav-btn">JOIN NOW</a>
+
+</div>
+</nav>
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div class="container hero-content">
+
+<div class="small-title">PREMIUM FITNESS EXPERIENCE</div>
+
+<h1>
+BUILD YOUR<br>
+<span>STRONGER</span><br>
+SELF.
+</h1>
+
+<p>
+Train smarter. Get stronger. Become the best version of yourself.
+KEERTI FITNESS is your destination for powerful workouts,
+professional guidance and a motivating fitness environment.
+</p>
+
+<div class="hero-buttons">
+
+<a href="#plans" class="btn btn-primary">
+JOIN NOW →
+</a>
+
+<a href="#programs" class="btn btn-outline">
+EXPLORE PROGRAMS
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- STATS -->
+
+<div class="stats">
+
+<div class="container stats-grid">
+
+<div class="stat">
+<h3>1000+</h3>
+<p>ACTIVE MEMBERS</p>
+</div>
+
+<div class="stat">
+<h3>8+</h3>
+<p>EXPERT TRAINERS</p>
+</div>
+
+<div class="stat">
+<h3>20+</h3>
+<p>WORKOUT PROGRAMS</p>
+</div>
+
+<div class="stat">
+<h3>5★</h3>
+<p>MEMBER EXPERIENCE</p>
+</div>
+
+</div>
+
+</div>
+
+
+<!-- ABOUT -->
+
+<section id="about">
+
+<div class="container">
+
+<div class="about-grid">
+
+<div class="about-image"></div>
+
+<div class="about-text">
+
+<div class="small-title">ABOUT KEERTI FITNESS</div>
+
+<h2>
+MORE THAN A <span>GYM.</span>
+</h2>
+
+<p>
+KEERTI FITNESS is designed for people who are serious about
+their fitness journey. Whether you're starting from zero or
+working toward your next personal record, our environment
+helps you stay focused, consistent and motivated.
+</p>
+
+<p>
+With modern equipment, experienced trainers and structured
+workout programs, we help you turn your fitness goals into
+real progress.
+</p>
+
+<div class="features">
+
+<div class="feature">✓ Modern Equipment</div>
+<div class="feature">✓ Expert Trainers</div>
+<div class="feature">✓ Clean Environment</div>
+<div class="feature">✓ Personal Guidance</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- PROGRAMS -->
+
+<section class="programs" id="programs">
+
+<div class="container">
+
+<div class="section-title">
+
+<div class="tag">TRAIN SMARTER</div>
+
+<h2>OUR PROGRAMS</h2>
+
+</div>
+
+<div class="program-grid">
+
+<div class="program">
+<div class="icon">🏋️</div>
+<h3>Strength Training</h3>
+<p>
+Build strength, improve performance and develop a stronger body
+with structured resistance workouts.
+</p>
+</div>
+
+<div class="program">
+<div class="icon">🔥</div>
+<h3>Fat Loss</h3>
+<p>
+Stay active and build sustainable fitness habits with energetic
+and goal-focused workouts.
+</p>
+</div>
+
+<div class="program">
+<div class="icon">❤️</div>
+<h3>Cardio</h3>
+<p>
+Improve stamina and cardiovascular fitness with effective cardio
+sessions designed for every level.
+</p>
+</div>
+
+<div class="program">
+<div class="icon">💪</div>
+<h3>Personal Training</h3>
+<p>
+Get one-to-one guidance from experienced trainers and follow a
+workout plan built around your goals.
+</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- MEMBERSHIP -->
+
+<section id="plans">
+
+<div class="container">
+
+<div class="section-title">
+
+<div class="tag">SIMPLE & FLEXIBLE</div>
+
+<h2>MEMBERSHIP PLANS</h2>
+
+</div>
+
+<div class="plans">
+
+<div class="plan">
+
+<h3>MONTHLY</h3>
+
+<div class="price">
+₹999 <span>/ month</span>
+</div>
+
+<ul>
+<li>✓ Full Gym Access</li>
+<li>✓ Cardio Zone</li>
+<li>✓ Weight Training</li>
+<li>✓ Locker Facility</li>
+</ul>
+
+<a href="#contact" class="btn btn-primary">
+GET STARTED
+</a>
+
+</div>
+
+
+<div class="plan featured">
+
+<div class="badge">MOST POPULAR</div>
+
+<h3>QUARTERLY</h3>
+
+<div class="price">
+₹2,499 <span>/ 3 months</span>
+</div>
+
+<ul>
+<li>✓ Full Gym Access</li>
+<li>✓ All Workout Zones</li>
+<li>✓ Trainer Guidance</li>
+<li>✓ Fitness Assessment</li>
+</ul>
+
+<a href="#contact" class="btn btn-primary">
+JOIN TODAY
+</a>
+
+</div>
+
+
+<div class="plan">
+
+<h3>YEARLY</h3>
+
+<div class="price">
+₹7,999 <span>/ year</span>
+</div>
+
+<ul>
+<li>✓ Unlimited Gym Access</li>
+<li>✓ Personal Guidance</li>
+<li>✓ Fitness Assessment</li>
+<li>✓ Special Member Benefits</li>
+</ul>
+
+<a href="#contact" class="btn btn-primary">
+CHOOSE PLAN
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- TRAINERS -->
+
+<section class="trainers">
+
+<div class="container">
+
+<div class="section-title">
+
+<div class="tag">MEET THE TEAM</div>
+
+<h2>EXPERT TRAINERS</h2>
+
+</div>
+
+<div class="trainer-grid">
+
+<div class="trainer">
+
+<img src="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?auto=format&fit=crop&w=900&q=85">
+
+<div class="trainer-info">
+<h3>Arjun Sharma</h3>
+<p>STRENGTH & CONDITIONING COACH</p>
+</div>
+
+</div>
+
+
+<div class="trainer">
+
+<img src="https://images.unsplash.com/photo-1534367507873-d2d7e24c7977?auto=format&fit=crop&w=900&q=85">
+
+<div class="trainer-info">
+<h3>Rahul Verma</h3>
+<p>PERSONAL FITNESS TRAINER</p>
+</div>
+
+</div>
+
+
+<div class="trainer">
+
+<img src="https://images.unsplash.com/photo-1549476464-37392f717541?auto=format&fit=crop&w=900&q=85">
+
+<div class="trainer-info">
+<h3>Neha Singh</h3>
+<p>FITNESS & CARDIO COACH</p>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- TIMINGS -->
+
+<section>
+
+<div class="container">
+
+<div class="section-title">
+
+<div class="tag">PLAN YOUR WORKOUT</div>
+
+<h2>GYM TIMINGS</h2>
+
+</div>
+
+<div class="timing-box">
+
+<div class="timing-row">
+<div class="day">Monday – Friday</div>
+<div class="time">5:30 AM – 10:30 PM</div>
+</div>
+
+<div class="timing-row">
+<div class="day">Saturday</div>
+<div class="time">6:00 AM – 10:00 PM</div>
+</div>
+
+<div class="timing-row">
+<div class="day">Sunday</div>
+<div class="time">7:00 AM – 1:00 PM</div>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- WHY CHOOSE US -->
+
+<section class="programs">
+
+<div class="container">
+
+<div class="section-title">
+
+<div class="tag">WHY KEERTI FITNESS</div>
+
+<h2>WHY CHOOSE US?</h2>
+
+</div>
+
+<div class="why-grid">
+
+<div class="why">
+<div class="why-icon">🏆</div>
+<h3>Professional Training</h3>
+<p>
+Learn the right technique and train with guidance from experienced
+fitness professionals.
+</p>
+</div>
+
+<div class="why">
+<div class="why-icon">⚡</div>
+<h3>Modern Equipment</h3>
+<p>
+Train with quality equipment across dedicated strength and cardio
+workout zones.
+</p>
+</div>
+
+<div class="why">
+<div class="why-icon">🔥</div>
+<h3>Motivating Environment</h3>
+<p>
+A positive training atmosphere designed to keep you consistent
+and motivated.
+</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- GALLERY -->
+
+<section id="gallery">
+
+<div class="container">
+
+<div class="section-title">
+
+<div class="tag">INSIDE KEERTI FITNESS</div>
+
+<h2>OUR GALLERY</h2>
+
+</div>
+
+<div class="gallery">
+
+<img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1000&q=85">
+
+<img src="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?auto=format&fit=crop&w=1000&q=85">
+
+<img src="https://images.unsplash.com/photo-1571902943202-507ec2618e8f?auto=format&fit=crop&w=1000&q=85">
+
+<img src="https://images.unsplash.com/photo-1599058917212-d750089bc07e?auto=format&fit=crop&w=1000&q=85">
+
+<img src="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?auto=format&fit=crop&w=1000&q=85">
+
+<img src="https://images.unsplash.com/photo-1540497077202-7c8a3999166f?auto=format&fit=crop&w=1000&q=85">
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- TESTIMONIALS -->
+
+<section class="testimonials">
+
+<div class="container">
+
+<div class="section-title">
+
+<div class="tag">MEMBER STORIES</div>
+
+<h2>WHAT MEMBERS SAY</h2>
+
+</div>
+
+<div class="testimonial-grid">
+
+<div class="testimonial">
+
+<div class="stars">★★★★★</div>
+
+<p>
+"Great atmosphere and excellent equipment. The trainers are
+supportive and always ready to help."
+</p>
+
+<h4>— Aman K.</h4>
+
+</div>
+
+
+<div class="testimonial">
+
+<div class="stars">★★★★★</div>
+
+<p>
+"KEERTI FITNESS has completely changed the way I approach my
+workouts. Highly recommended."
+</p>
+
+<h4>— Rohan S.</h4>
+
+</div>
+
+
+<div class="testimonial">
+
+<div class="stars">★★★★★</div>
+
+<p>
+"Clean environment, friendly trainers and everything needed for
+a serious workout."
+</p>
+
+<h4>— Priya M.</h4>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- CTA -->
+
+<section class="cta">
+
+<div class="container">
+
+<h2>READY TO GET STRONGER?</h2>
+
+<p>
+Your fitness journey starts with one decision.
+Take the first step today.
+</p>
+
+<a href="#contact" class="btn" style="background:#fff;color:#000;">
+START YOUR JOURNEY →
+</a>
+
+</div>
+
+</section>
+
+
+<!-- CONTACT -->
+
+<section id="contact">
+
+<div class="container">
+
+<div class="section-title">
+
+<div class="tag">GET IN TOUCH</div>
+
+<h2>VISIT KEERTI FITNESS</h2>
+
+</div>
+
+<div class="contact-grid">
+
+<div class="contact-card">
+
+<h3>📍 Our Location</h3>
+
+<p>
+Keerti Fitness<br>
+Main Market Road<br>
+Lucknow, Uttar Pradesh<br>
+India
+</p>
+
+<a href="#" class="contact-btn">
+GET DIRECTIONS
+</a>
+
+</div>
+
+
+<div class="contact-card">
+
+<h3>📞 Contact Us</h3>
+
+<p>
+Have questions about membership or personal training?
+Our team is ready to help you.
+</p>
+
+<a href="tel:+919876543210" class="contact-btn">
+CALL NOW
+</a>
+
+<a href="https://wa.me/919876543210" class="contact-btn">
+WHATSAPP
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+<div class="container">
+
+<div class="logo">
+KEERTI <span>FITNESS</span>
+</div>
+
+<p>
+©️ 2026 KEERTI FITNESS. All Rights Reserved.
+</p>
+
+</div>
+
+</footer>
+
+
+<script>
+
+/* Simple scroll animation */
+
+const elements = document.querySelectorAll(
+'.program, .plan, .trainer, .testimonial, .why, .contact-card'
+);
+
+const observer = new IntersectionObserver((entries)=>{
+    entries.forEach(entry=>{
+        if(entry.isIntersecting){
+            entry.target.style.opacity='1';
+            entry.target.style.transform='translateY(0)';
+        }
+    });
+},{
+    threshold:.15
+});
+
+elements.forEach(el=>{
+    el.style.opacity='0';
+    el.style.transform='translateY(30px)';
+    el.style.transition='all .7s ease';
+    observer.observe(el);
+});
+
+</script>
+
+</body>
+</html>
